@@ -1,0 +1,50 @@
+@import "./nullstyle.scss";
+
+// Переменные
+$fz: 80px;
+$color_1: green;
+
+// Шаблон
+%tplborder {
+  border-bottom: 5px dashed red;
+}
+
+@mixin fontz($f, $fc) {
+  font-size: $f;
+  color: $fc;
+}
+
+.block {
+  width: 300px / 960px * 100%;
+  background-color: #666;
+  font-size: 14px;
+  line-height: 20px;
+  .block_text {
+    font-size: $fz;
+    span {
+      color: $color_1;
+    }
+  }
+  &.block--big {
+    font-size: 100px;
+  }
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+  font-size: 20px;
+  .block & {
+    font-size: 100px;
+  }
+
+  &:hover {
+    color: $color_1;
+  }
+  @extend %tplborder;
+}
+.link-2 {
+  @include fontz(150px, pink);
+  @extend %tplborder;
+  border-bottom: 5px dashed #000;
+}
