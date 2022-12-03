@@ -1,5 +1,5 @@
 # SASS-SCSS
-<div> Studied: 
+<div> Изучила: / Studied: 
 <ul> 
 <li> syntax, </li> 
 <li> nestingb, </li>
